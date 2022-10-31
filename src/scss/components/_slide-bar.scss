@@ -1,0 +1,103 @@
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.slider-cont {
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  width: 300px;
+  height: 8px;
+
+}
+
+.slider input[type="range"] {
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 304px;
+  height: 8px;
+  appearance: none;
+  background: transparent;
+  z-index: 99;
+
+}
+
+.slider input::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid rgb(9, 205, 240);
+  cursor: pointer;
+  box-shadow: (0 0 0 1px #fff);
+  border-radius: 50%;
+}
+
+.slider input::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.slider progress {
+  width: 300px;
+  height: 8px;
+  appearance: none;
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.slider progress::-webkit-progress-bar {
+  background: #f0f0f0;
+
+}
+
+.slider progress::-webkit-progress-value {
+  background: rgb(9,205,240);
+}
+
+.slider-value {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 28px;
+  height: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+/*--------------------------------------------*/
+/*--Below is commented out HTML for slidebar--*/
+/*--------------------------------------------*/
+/*--------------------------------------------
+  <div class="slider-cont">
+    <div class="slider">
+      <input type="range" min="0" max="1000" value="500" >
+      <progress min="0" max="1000" value=500></progress>
+    </div>
+    <div class="slider-value">
+      500
+    </div>
+  </div>
+  <script>
+    window.onload = function( ) {
+      slider = document.querySelector('.slider input');
+      slider.oninput = function( ) {
+        progress_bar = document.querySelector('.slider progress');
+        progress_bar.value = slider.value;
+        slider_value = document.querySelector('.slider-value');
+        slider_value.innerHTML = slider.value;
+      }
+    }
+  </script> 
+----------------------------------------------*/
+/*--Above is commented out HTML for slidebar--*/
+/*--------------------------------------------*/

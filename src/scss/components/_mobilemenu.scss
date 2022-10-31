@@ -1,0 +1,177 @@
+@import '../mixin';
+
+/*--****************************************--*/
+/*--HTML Below is for mobile navigation menu--*/
+/*--****************************************--*/
+// <header>
+// <div class="menu-btn">
+//   <Span class="menu-btn__burger"></Span>
+// </div>
+
+// <nav class="nav">
+//   <ul class="menu-nav">
+//     <li class="menu-nav__item">
+//       <a href="" class="menu-nav__link" active>About</a>
+//     </li>
+//     <li class="menu-nav__item">
+//       <a href="" class="menu-nav__link" active>Careers</a>
+//     </li>
+//     <li class="menu-nav__item">
+//       <a href="" class="menu-nav__link" active>Events</a>
+//     </li>
+//     <li class="menu-nav__item">
+//       <a href="" class="menu-nav__link" active>Products</a>
+//     </li>
+//     <li class="menu-nav__item">
+//       <a href="" class="menu-nav__link" active>Support</a>          
+//     </li>
+//   </ul>
+// </nav>
+// </header>
+/*--****************************************--*/
+/*--****************************************--*/
+
+
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  @include transition-ease;
+
+  
+
+  &__burger {
+    position: absolute;
+    right: 0;
+    top: .5rem;
+    width: 28px;
+    height: 3px;
+    background: white;
+    @include transition-ease;
+  
+  
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      width: 28px;
+      height: 3px;
+      background: white;
+      @include transition-ease;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      width: 20px;
+      height: 3px;
+      background: white;
+      @include transition-ease;
+    }
+
+    &.open {
+      transform: rotate(360deg);
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+
+      &::after {
+        width: 28px;
+        transform: rotate(-45deg) translate(3px, -7px);
+
+      }
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: .98;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+
+  .menu-nav {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+    list-style-type: none;
+    padding-right: 1rem;
+    transform: translateY(-100%);
+    @include transition-ease;
+
+    &.open {
+      transform: translateY(0);
+    }
+
+    &__item {
+      transform: translateX(100vw);
+      @include transition-ease;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      &.active > a {
+        color: white;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      padding: 2rem;
+      padding-right: 2rem;
+
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+}
+/*--____________________________________________--*/
+/*--******JAVASCRIPT FOR MOBILE MENU***************/
+/*--____________________________________________--*/
+// const menu_btn = document.querySelector('.menu-btn');
+// const hamburger = document.querySelector('.menu-btn__burger');
+
+// const nav = document.querySelector('.nav');
+// const menu_nav = document.querySelector('.menu-nav');
+
+// const nav_items = document.querySelectorAll('.menu-nav__item')
+
+// let show_menu = false;
+
+// menu_btn.addEventListener('click', toggle_menu);
+
+// function toggle_menu () {
+//   if(!show_menu) {
+//     hamburger.classList.add('open');
+//     nav.classList.add('open');
+//     menu_nav.classList.add('open');
+//     nav_items.forEach(item => item.classList.add('open'));
+
+//     show_menu = true;
+//   } else {
+//     hamburger.classList.remove('open');
+//     nav.classList.remove('open');
+//     menu_nav.classList.remove('open');
+//     nav_items.forEach(item => item.classList.remove('open'));
+//     show_menu = false;
+//   }
+// }
