@@ -47,12 +47,11 @@
   &__burger {
     position: absolute;
     right: 0;
-    top: .5rem;
+    top: 0.5rem;
     width: 28px;
     height: 3px;
     background: white;
     @include transition-ease;
-  
   
 
     &::before {
@@ -85,7 +84,6 @@
       &::after {
         width: 28px;
         transform: rotate(-45deg) translate(3px, -7px);
-
       }
     }
   }
@@ -105,7 +103,7 @@
 
   .menu-nav {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -135,8 +133,11 @@
 
     &__link {
       display: inline-block;
-      padding: 2rem;
-      padding-right: 2rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: 300;
+      @include transition-ease;
 
       &:hover {
         color: gray;
@@ -144,6 +145,37 @@
     }
   }
 }
+/*--____________________________________________--*/
+/*--******JAVASCRIPT FOR MOBILE MENU***************/
+/*--____________________________________________--*/
+// const menu_btn = document.querySelector('.menu-btn');
+// const hamburger = document.querySelector('.menu-btn__burger');
+
+// const nav = document.querySelector('.nav');
+// const menu_nav = document.querySelector('.menu-nav');
+
+// const nav_items = document.querySelectorAll('.menu-nav__item')
+
+// let show_menu = false;
+
+// menu_btn.addEventListener('click', toggle_menu);
+
+// function toggle_menu () {
+//   if(!show_menu) {
+//     hamburger.classList.add('open');
+//     nav.classList.add('open');
+//     menu_nav.classList.add('open');
+//     nav_items.forEach(item => item.classList.add('open'));
+
+//     show_menu = true;
+//   } else {
+//     hamburger.classList.remove('open');
+//     nav.classList.remove('open');
+//     menu_nav.classList.remove('open');
+//     nav_items.forEach(item => item.classList.remove('open'));
+//     show_menu = false;
+//   }
+// }
 /*--____________________________________________--*/
 /*--******JAVASCRIPT FOR MOBILE MENU***************/
 /*--____________________________________________--*/

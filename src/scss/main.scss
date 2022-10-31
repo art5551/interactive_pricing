@@ -1,56 +1,38 @@
 @import './resets';
-@import './variables';
-@import './home';
 @import '../scss/components/mobilemenu';
 
-body {
-  background: $primary;
+
+ /* setting the initial content attributes here */
+ /* start initial design with mobile design first */
+ body {
+  background-color: white;
+  /* height: 100vh; */
+  /* setting max-width to width of image provided */
+}
+
+
+
+.section-one {
+  display: grid;
+  max-width: 1440px;
+  height: 650px;
+  background: url(../images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.section-one-heading {
+  grid-row-start: 4;
   color: white;
-  height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family-secondary);
+  font-size: 2.75rem;
+  text-transform: uppercase;
   line-height: 1;
+  border: 1px solid white;
+  padding: 2rem;
+  margin: 1rem;
+
+  
 }
-
-
-a {
-  color:white;
-  text-decoration: none;
-}
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  padding: 1rem;
-}
-
-main {
-  height: 100%;
-  width: 100%;
-
-  .social-icons {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-  }
-
-  a {
-    padding: .4rem;
-    @include transition-ease;
-
-    &:hover{
-      color: $secondary;
-    }
-  }  
-}
-
-footer {
-  font-size: 1rem;
-  position: fixed;
-  bottom: .4rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
-  color: black;
-}
-
