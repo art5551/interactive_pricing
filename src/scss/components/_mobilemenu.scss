@@ -30,7 +30,13 @@
 // </header>
 /*--****************************************--*/
 /*--****************************************--*/
+.menu-logo {
+  position: absolute;
+  z-index: 1;
+  left: 1rem;
+  top: 1rem;
 
+}
 
 .menu-btn {
   position: absolute;
