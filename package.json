@@ -1,5 +1,5 @@
 {
-  "name": "sass_library",
+  "name": "interactive_pricing",
   "version": "1.0.0",
   "description": "Check npm installed / npm -v\r cmd line / npm ini -y",
   "main": "index.js",
