@@ -42,6 +42,12 @@ $base-border-radius: 20px !default;
 // box-shadow
 $base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1) !default;
 
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+$ff-prime: 'Alata', sans-serif;
+$ff-secondary: 'Josefin Sans', sans-serif;
+
 // font-sizes
 $base-font-size: 1rem;
 $font-size-sm: $base-font-size * 0.75 !default;
