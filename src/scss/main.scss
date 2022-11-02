@@ -1,9 +1,157 @@
 @import './resets';
+@import './variables';
 
-@media (min-width: 75em) {
+
+
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: url('../images/bg-pattern.svg');
+  
+} 
+
+.heading {
+  width: 100vw;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('../images/pattern-circles.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &_text {
+    font-family: $ff-prime;
+    font-size: $font-size-lg;
+    color: $ctabackground;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+
+  &_description {
+    font-family: $ff-prime;
+    font-size: $base-font-size;
+    color: $text;
+    font-weight: 800;
+    text-align: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+main {
+  background: white;
+  width: 90vw;
+  margin: auto;
+  box-shadow: $base-box-shadow;
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+
+
+  &_pageviews {
+    font-family: $ff-prime;
+    font-size: $base-font-size;
+    color: $text;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 3rem
+  }
+}
+
+@import './components/slide-bar';
+
+.pricing_range {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: $ff-prime;
+  color: $text;
+  margin-bottom: 2rem;
+}
+
+.pricing_cost {
+  margin-top: 2rem;
+  font-family: $ff-prime;
+  color: $ctabackground;
+  font-size: $font-size-xxl;
+  font-weight: 800;
+
+}
+
+.price-choices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-family: $ff-prime;
+  color: $text;
+  margin-bottom: 4rem
+}
+
+
+
+@import '../scss/components/toggle';
+
+.badge {
+  width: 1em;
+  height: 2em;
+  border-radius: 1em;
+  background-color: $discountbackground;
+  padding: .25rem;
+  color: $discounttext;
+  font-size: $font-size-sm;
+  font-weight: normal;
+  margin-left: .5em;
+}
+
+.reasons-to-buy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reason-to-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+
+}
+
+.reason {
+  padding-left: 1rem;
+}
+
+.start-trial-btn {
+  font-family: $ff-prime;
+  font-size: $base-font-size;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  border: 0;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  background-color: black;
+  color: white;
+  margin-top: 4rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 40em) {
   body {
     background: black;
     
-  }
-  
+  } 
 }
