@@ -92,7 +92,7 @@ input[type="checkbox"].toggle:checked + label::after {
   /*--I am just going to leave it at Left: 1em;--*/
   /* 1em worked until e added the X and checkmark--*/
   // left: 1em;
-  content: "\2713";
+  content: "";
   transform: translateX(100%);
 
 }

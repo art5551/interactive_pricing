@@ -1,10 +1,10 @@
 @import '../variables';
 
 .slider-cont {
-  padding: 25px;
-  border-radius: 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
 }
 
 .slider {
@@ -28,12 +28,13 @@
 
 .slider input::-webkit-slider-thumb {
   appearance: none;
-  width: 40px;
-  height: 40px;
-  background-color: $slidebar;
-  background-image: url('../images/pattern-circles.svg');
-  background-size: cover;
+  width: 30px;
+  height: 30px;
+  background: url('../images/icon-slider.svg');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $sliderbackground;
   cursor: pointer;
   box-shadow: (0 0 0 1px #fff);
   border-radius: 50%;
@@ -58,8 +59,10 @@
 
 }
 
+
+/*--Change color here of bar background when full--*/
 .slider progress::-webkit-progress-value {
-  background: $sliderbackground;
+  background: $slidebar;
 }
 
 .slider-value {
@@ -69,3 +72,31 @@
   margin-left: 10px;
   text-align: center;
 }
+
+/*--------------------------------------------*/
+/*--Below is commented out HTML for slidebar--*/
+/*--------------------------------------------*/
+/*--------------------------------------------
+  <div class="slider-cont">
+    <div class="slider">
+      <input type="range" min="0" max="1000" value="500" >
+      <progress min="0" max="1000" value=500></progress>
+    </div>
+    <div class="slider-value">
+      500
+    </div>
+  </div>
+  <script>
+    window.onload = function( ) {
+      slider = document.querySelector('.slider input');
+      slider.oninput = function( ) {
+        progress_bar = document.querySelector('.slider progress');
+        progress_bar.value = slider.value;
+        slider_value = document.querySelector('.slider-value');
+        slider_value.innerHTML = slider.value;
+      }
+    }
+  </script> 
+----------------------------------------------*/
+/*--Above is commented out HTML for slidebar--*/
+/*--------------------------------------------*/

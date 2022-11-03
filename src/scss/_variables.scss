@@ -7,7 +7,7 @@ $navbar: black !default;
 $toolbars:rgba(128, 128, 128, 0.39) !default;
 $slidebar: hsl(174, 77%, 80%);
 $sliderbackground: hsl(174, 86%, 45%);
-$discountbackground: hsl(14, 92%, 95%);
+$discountbackground: #feece7;
 $discounttext: hsl(15, 100%, 70%);
 $ctatext: hsl(226, 100%, 87%);
 $backgroundmain: hsl(226, 100%, 87%);
@@ -36,7 +36,7 @@ $colors: (
   "purple": #9900ff,
   "gray": #808080,
   "black": black,
-  "white": white,
+  "white": rgb(255, 255, 255),
 );
 
 // @debug map-get($colors, "purple");
