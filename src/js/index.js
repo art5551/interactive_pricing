@@ -27,7 +27,7 @@ function fetch_value() {
 
   var cost = calc_cost(slider.value);
   var add_discount = document.getElementById('check').checked;
-  console.log(add_discount);
+  // console.log(add_discount);
   if (add_discount) {
     const discount_price = (cost * .76)
     cost = discount_price.toFixed(2);

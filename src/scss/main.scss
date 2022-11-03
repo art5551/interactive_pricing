@@ -7,6 +7,7 @@
 body {
   height: 100vh;
   width: 100vw;
+  min-width: 375px;
   background: url('../images/bg-pattern.svg');
   
 } 
@@ -93,14 +94,14 @@ main {
   justify-content: space-around;
   font-family: $ff-prime;
   color: $text;
-  margin-bottom: 4rem
+  margin-bottom: 2rem
 }
 
 
 
 @import '../scss/components/toggle';
 
-.badge {
+.badge1 {
   width: 1em;
   height: 2em;
   border-radius: 1em;
@@ -112,6 +113,10 @@ main {
   margin-left: .5em;
 }
 
+.badge2 {
+  display: none;
+}
+
 .reasons-to-buy {
   display: flex;
   flex-direction: column;
@@ -121,10 +126,18 @@ main {
 
 .reason-to-buy {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+.reason-to-buy li {
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-
 }
 
 .reason {
@@ -149,9 +162,198 @@ main {
   margin-bottom: 3rem;
 }
 
+/*-------------------DESKTOP--------------------*/
 @media (min-width: 40em) {
   body {
-    background: black;
+    height: 100vh;
+    width: 100vw;
+    min-width: 375px;
+    background: url('../images/bg-pattern.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
     
   } 
+
+  main {
+    max-width: 800px;
+  }
+
+  .heading {
+    width: 100vw;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    &_text {
+      font-family: $ff-prime;
+      font-size: $font-size-lg;
+      color: $ctabackground;
+      font-weight: 800;
+      margin-bottom: 2rem;
+    }
+  
+    &_description {
+      font-family: $ff-prime;
+      font-size: $base-font-size;
+      color: $text;
+      font-weight: 800;
+      text-align: center;
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+  
+
+  
+  .pricing {
+    display: grid;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "pageviews pricing_range"
+    "slider slider"
+  }
+
+  .pricing_pagevews {grid-area: pageviews;}
+  .pricing_range {grid-area: pricing_range;}
+  .slider-cont {grid-area: slider;}
+  
+  
+  .pricing_pageviews {
+    font-family: $ff-prime;
+    font-size: $base-font-size;
+    color: $text;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center
+  }
+  
+  @import './components/slide-bar';
+  
+
+  .slider-cont {
+    margin-top: 1rem;
+  }
+  
+  .slider {
+    width: 600px;
+
+  }
+  
+  .slider input[type="range"] {
+    width: 604px;
+  }
+  
+  
+  .slider progress {
+    width: 600px;
+  }
+
+  .pricing_range {
+    align-items: center;
+    justify-content: center;
+    font-family: $ff-prime;
+    color: $text;
+  }
+  
+  .pricing_cost {
+    margin-top: 2rem;
+    font-family: $ff-prime;
+    color: $ctabackground;
+    font-size: $font-size-xxl;
+    font-weight: 800;
+  
+  }
+  
+  .price-choices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $ff-prime;
+    color: $text;
+    padding-left: 13rem;
+    padding-right: 11rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem
+  }
+  
+  
+  
+  @import '../scss/components/toggle';
+
+
+  .badge2 {
+    display: inline;
+    width: 1em;
+    height: 2em;
+    border-radius: 1em;
+    background-color: $discountbackground;
+    padding: .25rem;
+    color: $discounttext;
+    font-size: $font-size-sm;
+    font-weight: normal;
+    margin-left: .5em;
+  }
+
+  .badge1 {
+    display: none;
+  }
+
+
+  
+  .reasons-to-buy {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    justify-content: space-around;
+  }
+  
+  .reason-to-buy {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    flex-direction: column;
+
+    margin-top: 1rem;
+  }
+
+  .reason-to-buy li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .reason {
+    padding-left: 1rem;
+  }
+  
+  .start-trial-btn {
+    font-family: $ff-prime;
+    font-size: $base-font-size;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    border: 0;
+    padding: $base-padding;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: $base-border-radius;
+    background-color: black;
+    color: white;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+  
 }
