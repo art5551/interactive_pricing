@@ -29,7 +29,7 @@ function fetch_value() {
   var add_discount = document.getElementById('check').checked;
   // console.log(add_discount);
   if (add_discount) {
-    const discount_price = (cost * .76)
+    const discount_price = (cost * .75)
     cost = discount_price.toFixed(2);
   }
 
