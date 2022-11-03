@@ -4,8 +4,9 @@
   "description": "Check npm installed / npm -v\r cmd line / npm ini -y",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "buildlight": "parcel build src/index.html --no-source-maps --no-minify --no-cache"
+    "start": "parcel src/index.html",
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url 'https://github.com/art5551/interactive_pricing.git'",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
