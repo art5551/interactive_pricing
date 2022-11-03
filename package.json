@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "buildlight": "parcel build src/index.html --no-source-maps --no-minify --public url . --no-cache"
+    "buildlight": "parcel build src/index.html --no-source-maps --no-minify --no-cache"
   },
   "keywords": [],
   "author": "",
