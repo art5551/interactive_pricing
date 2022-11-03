@@ -62,7 +62,7 @@ input[type="checkbox"].toggle + label::after {
   height: .9em;
   background-color: white;
   border-radius: 1em;
-  transition: background-color 500ms ease-in;
+  transition: background-color 200ms ease-in;
   /*--Use css ABOVE here to just use plan toggle without X--*/
   // left: .1em;
   // content: "\2715";

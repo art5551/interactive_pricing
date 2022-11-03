@@ -30,7 +30,7 @@ function fetch_value() {
   // console.log(add_discount);
   if (add_discount) {
     const discount_price = (cost * .75)
-    cost = discount_price.toFixed(2);
+    cost = discount_price.toFixed(0);
   }
 
   amount.innerHTML = '$' + cost;
