@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/art5551/interactive_pricing.git](https://github.com/art5551/interactive_pricing.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://art5551.github.io/interactive_pricing/](https://art5551.github.io/interactive_pricing/)
 
 ## My process
 
